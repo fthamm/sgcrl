@@ -33,7 +33,11 @@ fixed_goal_dict={'point_Spiral11x11': [np.array([5,5], dtype=float), np.array([1
                      #note: sawyer fixed goal positions vary slightly with each episode
                       'sawyer_bin': np.array([0.12, 0.7, 0.02]),
                       'sawyer_box': np.array([0.0, 0.75, 0.133]),
-                      'sawyer_peg': np.array([-0.3, 0.6, 0.0])}
+                      'sawyer_peg': np.array([-0.3, 0.6, 0.0]),
+                      'stacked_blocks': np.array([0.5, 0.5, 0.3])}
+
+
+#TODO: goals werden als positions hier gesetzt
 
 @functools.lru_cache
 def get_env(env_name, start_index, end_index, seed, fix_goals = False, fix_goals_actor = False, use_naive_sampling=False, clock_period=None):

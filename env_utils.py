@@ -56,6 +56,12 @@ def load(env_name, fixed_start_end=None):
       max_episode_steps = 100
     else:
       max_episode_steps = 50
+
+  elif env_name == "stacked_blocks":
+    from my_envs.stacked_blocks_env import StackedBlocksEnv
+    CLASS = StackedBlocksEnv
+    max_episode_steps = 100
+    kwargs['fixed_start_end'] = fixed_start_end
   else:
     raise NotImplementedError('Unsupported environment: %s' % env_name)
 
